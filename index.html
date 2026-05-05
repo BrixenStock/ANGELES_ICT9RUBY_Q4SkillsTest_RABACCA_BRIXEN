@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+        * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, "Segoe UI", sans-serif;
+      color: #12212f;
+      background: radial-gradient(circle at top left, rgba(0,180,255,0.16), transparent 24%),
+                  radial-gradient(circle at bottom right, rgba(14,165,233,0.14), transparent 22%),
+                  linear-gradient(135deg, #eef1f6 0%, #f9fbff 100%);
+      display: grid;
+      place-items: center;
+      padding: 32px;
+    }
+
+    .page {
+      width: min(540px, 100%);
+      text-align: center;
+    }
+
+    .header {
+      margin-bottom: 32px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 1.45rem;
+      letter-spacing: 0.02em;
+    }
+
+    .header p {
+      margin: 10px auto 0;
+      color: var(--muted);
+      max-width: 360px;
+    }
+
+    .login-card {
+      position: relative;
+      background: rgba(255,255,255,0.94);
+      border-radius: 28px;
+      padding: 40px 36px 28px;
+      box-shadow: 0 30px 60px rgba(15,23,42,0.12);
+      overflow: hidden;
+    }
+
+    .logo-badge {
+      width: 76px;
+      height: 76px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #09c5ff, #2444ff);
+      display: grid;
+      place-items: center;
+      margin: 0 auto 20px;
+      color: white;
+      font-weight: 700;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .login-card h2 {
+      margin: 0 0 26px;
+      font-size: 2rem;
+      letter-spacing: -0.03em;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 18px;
+      text-align: left;
+    }
+
+    .field label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #667085;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .field input {
+      width: 100%;
+      border: none;
+      border-radius: 999px;
+      padding: 14px 18px;
+      background: #f4f6fb;
+      color: #12212f;
+      font-size: 0.98rem;
+      outline: none;
+    }
+
+    .field input:focus {
+      box-shadow: 0 0 0 3px rgba(0,180,255,0.18);
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin: 24px 0 16px;
+    }
+
+    .switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #667085;
+      font-size: 0.95rem;
+    }
+
+    .switch input {
+      accent-color: #00b4ff;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+      padding: 14px 28px;
+      min-width: 120px;
+      transition: transform 0.16s ease, box-shadow 0.16s ease;
+    }
+
+    .button-primary {
+      background: linear-gradient(135deg, #00b4ff, #0066ff);
+      color: white;
+      box-shadow: 0 18px 30px rgba(0,108,255,0.18);
+    }
+
+    .button-secondary {
+      background: #f3f4f8;
+      color: #12212f;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    .footer-link {
+      margin-top: 18px;
+      display: inline-block;
+      color: #667085;
+      text-decoration: none;
+      font-size: 0.92rem;
+    }
+
+    .footer-link:hover {
+      color: #0b63d8;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <p style="margin:0;color:#667085;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;font-size:.78rem;"></p>
+      <h1>Welcome to OOOBMC</h1>
+    </header>
+
+    <section class="login-card">
+      <div class="logo-badge">ST</div>
+      <h2>Login</h2>
+
+      <div class="field">
+        <label for="username">Username</label>
+        <input id="username" type="text" placeholder="Enter here" />
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="••••••••" />
+      </div>
+
+      <div class="actions">
+        <label class="switch">
+          <input type="checkbox" checked /> Stay logged in
+        </label>
+        <span style="color: #667085; font-size:0.95rem;">Your session will stay active on this device.</span>
+      </div>
+
+      <div class="button-row">
+        <a href="notebooks.html" class="button button-primary">Login</a>
+        <button type="button" class="button button-secondary">Cancel</button>
+      </div>
+
+      <a href="#" class="footer-link">Forgot username / password?</a>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('username').value = 'obadmin';
+    document.getElementById('password').value = '12345';
+  </script>
+</body>
+</html>
